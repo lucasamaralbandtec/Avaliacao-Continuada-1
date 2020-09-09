@@ -1,0 +1,50 @@
+ENDPOINTS DE  GET - "CONSULTA";
+
+http://localhost:8080/humanos/
+http://localhost:8080/humanos/viloes
+http://localhost:8080/humanos/herois
+http://localhost:8080/humanos/sempoderes
+http://localhost:8080/humanos/iluminados
+
+Consulta com path param:
+
+http://localhost:8080/humanos/{id}
+
+-----------------------------------------------------------------
+
+ENDPOINTS DE POST - "CRIAÇÃO";
+
+http://localhost:8080/humanos/novo/heroi
+
+value Heroi
+{
+    "nome" : "Nilton",
+    "sexo" : "Masculino"
+}
+
+http://localhost:8080/humanos/novo/vilao
+value Vilao
+{
+    "nome" : "Gabriela",
+    "sexo" : "Feminino"
+}
+
+http://localhost:8080/humanos/novoIluminado/heroi
+value heroiIluminado
+{
+    "nome" : "Nilton",
+    "sexo" : "Masculino"
+}
+
+http://localhost:8080/humanos/novoIluminado/vilao
+value vilaoIluminado
+{
+    "nome" : "Gabriela",
+    "sexo" : "Feminino"
+}
+
+-----------------------------------------------------------------
+
+ENDPOINTS DE DELETE - "REMOÇÃO";
+
+http://localhost:8080/humanos/{id}
