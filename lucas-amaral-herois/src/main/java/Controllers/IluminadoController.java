@@ -33,8 +33,7 @@ public class IluminadoController
     public ResponseEntity getHumano(@PathVariable int id)
     {
         if (humanos.size() >= id) {
-            humanos.get(id - 1);
-            return ResponseEntity.status(200).build();
+            return ResponseEntity.status(200).body(humanos.get(id - 1));
         } else
         {
             return ResponseEntity.status(404).build();
@@ -143,7 +142,7 @@ public class IluminadoController
     }
 
     @PostMapping("/novo/vilao")
-    public ResponseEntity criarHeroi(@RequestBody Vilao vilao)
+    public ResponseEntity criarVilao(@RequestBody Vilao vilao)
     {
         humanos.add(vilao);
         return ResponseEntity.status(201).build();
@@ -152,14 +151,14 @@ public class IluminadoController
     //<Summary> Cria herois e vilões iluminados <\Summary>
 
     @PostMapping("/novoIluminado/heroi")
-    public ResponseEntity criarHeroi(@RequestBody HeroiIluminado heroi)
+    public ResponseEntity criarHeroiIluminado(@RequestBody HeroiIluminado heroi)
     {
         humanos.add(heroi);
         return ResponseEntity.status(201).build();
     }
 
     @PostMapping("/novoIluminado/vilao")
-    public ResponseEntity criarHeroi(@RequestBody VilaoIluminado vilao)
+    public ResponseEntity criarVilaoIluminado(@RequestBody VilaoIluminado vilao)
     {
         humanos.add(vilao);
         return ResponseEntity.status(201).build();
